@@ -2,8 +2,9 @@ package com.example.hiltapplication.retrofit
 
 import com.example.hiltapplication.model.Post
 import com.example.hiltapplication.util.EntityMapper
+import javax.inject.Inject
 
-class NetworkMapper : EntityMapper<PostNetworkEntity, Post> {
+class NetworkMapper @Inject constructor() : EntityMapper<PostNetworkEntity, Post> {
     override fun mapFromEntity(entity: PostNetworkEntity): Post {
         return Post(
             userId = entity.userId,

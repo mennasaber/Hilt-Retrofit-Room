@@ -2,8 +2,9 @@ package com.example.hiltapplication.room
 
 import com.example.hiltapplication.model.Post
 import com.example.hiltapplication.util.EntityMapper
+import javax.inject.Inject
 
-class CacheMapper : EntityMapper<PostCacheEntity, Post> {
+class CacheMapper @Inject constructor() : EntityMapper<PostCacheEntity, Post> {
     override fun mapFromEntity(entity: PostCacheEntity): Post {
         return Post(
             userId = entity.userId,

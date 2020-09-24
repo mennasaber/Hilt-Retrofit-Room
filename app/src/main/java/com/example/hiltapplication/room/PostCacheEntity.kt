@@ -8,7 +8,7 @@ import androidx.room.PrimaryKey
 data class PostCacheEntity(
     @ColumnInfo(name = "user_id")
     val userId: Int,
-    @PrimaryKey
+    @PrimaryKey(autoGenerate = false)
     @ColumnInfo(name = "post_id")
     val postId: Int,
     @ColumnInfo(name = "post_title")
